@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guía de uso de GIT</title>
     <link rel="stylesheet" type="text/css" href="styles.css"">
 </head>
 <body>
     <h1>Guía de uso GIT</h1>
-    <h3>git checkout</h3>
-    <p>Permite regresar al estado anterior de un archivo, la sintaxis sería:</p>
-    <code>git checkout filename</code>
-    <h3>git status</h3>
-    <p>Permite consultar el estatus de todos los archivos en el directorio, la sintaxis sería:</p>
-    <code>git status</code>
-    <h3>git add</h3>
-    <p>Este comando agrega un archivo para que se le realice un commit. Los archivos marcados como "u" significa que no están siendo rastreados, mientras que si se marcan con una "m" significa que el archivo (siendo rastreado) tiene una modificación, si se le agrega el "git add" ese archivo también pasará al commit. La sintaxis sería:</p>
-    <code>git add filename</code>
-    <p>Pueden escribirse en fila varios nombres de archivo:</p>
-    <code>git add filename1 filename2 ...</code>
-    <p>Incluso podría escribirse que se agregue todo el contenido del directorio, en cuyo caso sería:</p>
-    <code>git add .</code>
-    <h3>git commit</h3>
-    <p>Este comando permite realizar el commit y registrar las modificaciones hechas en el directorio, su sintaxis sería:</p>
-    <code>git commit -m "comentario"</code>
+    <ul>
+        <a href="Pasos generales.html">Pasos generales</a>
+    </ul>
+    <div id="texto">
+        <h3>touch</h3>
+        <p>Es un comando que podemos ejecutar desde la terminal bash y nos va a permitir crear un archivo (debemos indicar la extensión del archivo), su sintaxis sería:</p>
+        <code>touch filename</code>
+        <h3>git checkout</h3>
+        <p>Permite regresar al estado anterior de un archivo, la sintaxis sería:</p>
+        <code>git checkout filename</code>
+        <h3>git status</h3>
+        <p>Permite consultar el estatus de todos los archivos en el directorio, la sintaxis sería:</p>
+        <code>git status</code>
+        <h3>git add</h3>
+        <p>Este comando agrega un archivo para que se le realice un commit. Los archivos marcados como "u" significa que no están siendo rastreados, mientras que si se marcan con una "m" significa que el archivo (siendo rastreado) tiene una modificación, si se le agrega el "git add" ese archivo también pasará al commit. La sintaxis sería:</p>
+        <code>git add filename</code>
+        <p>Pueden escribirse en fila varios nombres de archivo:</p>
+        <code>git add filename1 filename2 ...</code>
+        <p>Incluso podría escribirse que se agregue todo el contenido del directorio, en cuyo caso sería:</p>
+        <code>git add .</code>
+        <h3>git commit</h3>
+        <p>Este comando permite realizar el commit y registrar las modificaciones hechas en el directorio, su sintaxis sería:</p>
+        <code>git commit -m "comentario"</code>
+        <h3>Alias</h3>
+        <p>Con este comando podemos crear "rutas" o "comandos" personalizados, en base a los que usemos mucho, su sintaxis sería:</p>
+        <code>git config --global alias.name "conjunto de comandos"</code>
+        <h3>git ignore</h3>
+        <p>Es un archivo que va a incluir la lista de ficheros y/o directorios que queremos que no sean incluidos en un commit. Debe estar ubicado en la raíz del proyecto. Sintaxis de creación:</p>
+        <code>touch .gitignore</code>
+        <p>Dentro del .gitignore se escriben los nombres y las ubicaciones de los ficheros. Tambbién puede escribirse de tal manera que, independientemente de la ubicación del fichero, el sistema lo ignore, empleando la expresión "**/":</p>
+        <code>**/filename</code>
+        <p>El .gitignore es incluido en el repositorio.</p>
+    </div>
 </body>
 </html>
