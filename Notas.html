@@ -18,9 +18,19 @@
         <h3>git checkout</h3>
         <p>Permite regresar al estado anterior de un archivo, la sintaxis sería:</p>
         <code>git checkout filename</code>
+        <p>El comando <i>checkout</i> también puede regresar a commits anteriores, sin embargo al hacer eso (retornar a ramas previas), se perderán todas las ramas que se hicieron después de ese commit. Esto puede ser útil para revertir cambios y volver a un estado anterior en que un error o un conflicto en el código no estaba. Para ello debemos disponer del hash del commit:</p>
+        <code>git checkout #hash</code>
+        <p>Si se dispone de los hash de los commits perdidos, es posible volver a esa configuración del proyecto. Adicionalmente, se puede designar cualquiera de las ramas como el nuevo HEAD o cabecera del árbol de proyectos. Para ello deberemos situarnos en esa rama y tipear:</p>
+        <code>git checkout HEAD</code>
         <h3>git status</h3>
         <p>Permite consultar el estatus de todos los archivos en el directorio, la sintaxis sería:</p>
         <code>git status</code>
+        <h3>git log</h3>
+        <p>Me muestra el historial de modificaciones registradas (commits).</p>
+        <code>git log</code>
+        <h3>git reflog</h3>
+        <p>Historial completo de interacciones que hayamos hecho en el git:</p>
+        <code>git reflog</code>
         <h3>git add</h3>
         <p>Este comando agrega un archivo para que se le realice un commit. Los archivos marcados como "u" significa que no están siendo rastreados, mientras que si se marcan con una "m" significa que el archivo (siendo rastreado) tiene una modificación, si se le agrega el "git add" ese archivo también pasará al commit. La sintaxis sería:</p>
         <code>git add filename</code>
@@ -31,15 +41,26 @@
         <h3>git commit</h3>
         <p>Este comando permite realizar el commit y registrar las modificaciones hechas en el directorio, su sintaxis sería:</p>
         <code>git commit -m "comentario"</code>
+        <h3>git tag</h3>
+        <p>Un tag es una etiqueta que podemos agregar al commit en donde estamos, y que se verá reflejada al consultar el log de git:</p>
+        <code>git tag nombre_del_tag</code>
+        <p>Por buena práctica, los tag's siempre deben escribirse todos en minúsculas y con guión bajo en lugar de espacios. Si sólo escrio "git tag" en la consola, me listará los tag's que he creado.</p>
         <h3>Alias</h3>
         <p>Con este comando podemos crear "rutas" o "comandos" personalizados, en base a los que usemos mucho, su sintaxis sería:</p>
         <code>git config --global alias.name "conjunto de comandos"</code>
+        <p>Con el siguiente código, podemos crear un árbol simplificado de los commits realizados:</p>
+        <code>git config --global alias.tree "log --graph --decorate --all --oneline"</code>
+        <p>El resultado, al consultar el archivo .gitconfig, sería:</p>
+        <code>tree = log --graph --decorate --all --oneline</code>
         <h3>git ignore</h3>
         <p>Es un archivo que va a incluir la lista de ficheros y/o directorios que queremos que no sean incluidos en un commit. Debe estar ubicado en la raíz del proyecto. Sintaxis de creación:</p>
         <code>touch .gitignore</code>
         <p>Dentro del .gitignore se escriben los nombres y las ubicaciones de los ficheros. Tambbién puede escribirse de tal manera que, independientemente de la ubicación del fichero, el sistema lo ignore, empleando la expresión "**/":</p>
         <code>**/filename</code>
         <p>El .gitignore es incluido en el repositorio.</p>
+        <h3>git diff</h3>
+        <p>Nos muestra los cambios en el repositorio sin necesidad de hacer un commit.</p>
+        <code>git diff</code>
     </div>
 </body>
 </html>

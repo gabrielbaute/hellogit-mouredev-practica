@@ -32,7 +32,8 @@ p {
 ol {
     padding: 5%;
     background-color: rgb(136, 139, 129);
-    color: white;   
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifgit;
 }
 
 code {
